@@ -16,9 +16,11 @@
         </div>
       </div>
       <div class="screenshots-wrapper">
+        {{ if .frame }}
         <div class="screenshots-slider-frame">
-          <img src="images/screenshots/slider-frame.svg" alt="slider-frame" />
+          <img src="{{ .frame }}" alt="slider-frame" />
         </div>
+        {{ end }}
         <div class="screenshots-slider">
           {{ $Section := .images }}
           {{ range $Section }}
