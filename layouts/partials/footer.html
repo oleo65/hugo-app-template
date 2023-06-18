@@ -6,7 +6,7 @@
           <h2>{{ .Site.Params.footerTitle }}</h2>
         </div>
       </div>
-      <div class="col-lg-8 mx-auto">
+      <!-- <div class="col-lg-8 mx-auto">
         <form action="#" class="footer-subscribe-form">
           <div class="from-group">
             <div class="input-group">
@@ -42,18 +42,18 @@
             </div>
           </div>
         </form>
-      </div>
+      </div> -->
     </div>
     <div class="row">
-      <div class="col-lg-4 col-md-4">
+      <div class="col-lg-6 col-md-6">
         <div class="footer-description">
-          <img src="{{ .Site.Params.logo | absURL }}" alt="logo">
+          <img src="{{ .Site.Params.logo | absURL }}" alt="logo" height="75"> Squirrel Vorratsverwaltung
           <p>
             {{ .Site.Params.copyright1 }}
               </br>
               {{ replace .Site.Params.copyright2   "{year}" now.Year | safeHTML }}
           </p>
-          <ul class="footer-description-social">
+          <!-- <ul class="footer-description-social">
             <li>
               <a href="{{ .Site.Params.social.facebook }}"><i class="ti-facebook"></i></a>
             </li>
@@ -63,10 +63,10 @@
             <li>
               <a href="{{ .Site.Params.social.github }}"><i class="ti-github"></i></a>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
-      <div class="col-lg-4 col-md-4">
+      <div class="col-lg-6 col-md-6">
         <div class="footer-widget">
           <h4>Sitemap</h4>
           <div class="footer-widget-list">
@@ -79,7 +79,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4">
+      <!-- <div class="col-lg-4 col-md-4">
         <div class="footer-widget">
           <h4>Address</h4>
           {{ $address := .Site.Params.address }}
@@ -91,7 +91,7 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </footer>

@@ -6,10 +6,6 @@
       <div class="row">
         <div class="col-12">
           <h2>{{ .Title }}</h2>
-          <p>
-            Don't like forms send us an
-            <a href="mailto:{{ .Site.Params.email }}">email</a>
-          </p>
         </div>
       </div>
     </div>
@@ -26,7 +22,7 @@
               <input
                 type="text"
                 class="form-control"
-                placeholder="Full Name"
+                placeholder="Name"
                 name="Name"
                 required
               />
@@ -35,19 +31,18 @@
               <input
                 type="email"
                 class="form-control"
-                placeholder="Email"
+                placeholder="Konto-Email"
                 name="email"
                 required
               />
             </div>
             <div class="col-12">
-              <input type="text" class="form-control" placeholder="Subject" name="subject" />
+              <input type="text" class="form-control" placeholder="Betreff" name="subject" />
             </div>
             <div class="col-12">
               <textarea
                 class="form-control"
-                placeholder="Message"
-                required
+                placeholder="Nachricht"
                 cols="30"
                 rows="7"
                 name="message"
@@ -63,22 +58,19 @@
                   required
                 />
                 <label class="form-check-label" for="termCondition">
-                  Accept <a href="#">terms and conditions</a>
+                  Ich verstehe ausdrücklich, dass diese Entscheidung endgültig ist und nicht rückgängig gemacht werden kann.
                 </label>
               </div>
             </div>
             <div class="col-6 text-right">
               <button id="contact-form-button" class="btn btn-primary-filled" type="submit" formtarget="_blank">
-                Submit
+                Abschicken
               </button>
             </div>
             <div class="col-12">
               <p id="contact-form-status" class="mt-3"></p>
             </div>
           </form>
-          <p class="contact-form-generator mt-3">
-            <strong>** </strong><a href="https://fabform.io/" target="_blank">Static website forms</a>
-          </p>
         </div>
       </div>
     </div>
