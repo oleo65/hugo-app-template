@@ -37,5 +37,6 @@ function ajax(method, url, data, success, error) {
       error(xhr.status, xhr.response, xhr.responseType);
     }
   };
-  xhr.send(data);
+  var serializdData = JSON.stringify(Object.fromEntries(data));
+  xhr.send(serializdData);
 }
