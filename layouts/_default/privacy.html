@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1>{{ .Title }}</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="page-content-wrapper">
+
+          {{ partial "privacy/base.html" . }}
+
+          <h2>Eingesetzte Dienste</h2>
+          <p>Diese App nutzt folgende Dienste von Google Firebase (Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). Firebase verarbeitet Daten in Europa (Rechenzentrum Frankfurt, Deutschland) sowie ggf. in den USA auf Grundlage der EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Es besteht eine Datenverarbeitungsvereinbarung gemäß Art. 28 DSGVO. Weitere Informationen: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">firebase.google.com/support/privacy</a>.</p>
+
+          {{ if .Site.Params.privacy.useFirebaseAuth }}
+            {{ partial "privacy/firebase-auth.html" . }}
+          {{ end }}
+
+          {{ if .Site.Params.privacy.useFirestore }}
+            {{ partial "privacy/firebase-firestore.html" . }}
+          {{ end }}
+
+          {{ if .Site.Params.privacy.useCloudFunctions }}
+            {{ partial "privacy/firebase-functions.html" . }}
+          {{ end }}
+
+          {{ if .Site.Params.privacy.useCloudStorage }}
+            {{ partial "privacy/firebase-storage.html" . }}
+          {{ end }}
+
+          {{ if .Site.Params.privacy.useCloudMessaging }}
+            {{ partial "privacy/firebase-messaging.html" . }}
+          {{ end }}
+
+          {{ if .Site.Params.privacy.useAnalytics }}
+            {{ partial "privacy/firebase-analytics.html" . }}
+          {{ end }}
+
+          {{ partial "privacy/rights.html" . }}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
